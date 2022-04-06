@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import AddSub from "./components/AddSub";
+import ColorChange from "./components/ColorChange";
+import GrowShrink from "./components/GrowShrink";
+import HideMe from "./components/HideMe";
+import HowdyGoodbye from "./components/HowdyGoodbye";
+import Mount from "./components/Mount";
+import PushAround from "./components/PushAround"
+import Rgb from "./components/Rgb";
+import "./styles/main.scss"
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddSub />
+      <hr />
+      <HowdyGoodbye />
+      <hr />
+      <HideMe />
+      <hr />
+      <GrowShrink />
+      <hr />
+      <PushAround />
+      <hr />
+      <Mount />
+      <hr />
+      <ColorChange />
+      <hr />
+      <Rgb />
+      <hr />
     </div>
   );
 }
