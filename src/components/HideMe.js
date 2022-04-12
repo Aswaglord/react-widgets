@@ -13,10 +13,12 @@ export default class HideMe extends Component {
     handleHideShow() {
       const newButtonText = this.state.buttonText === 'Hide' ? 'Show' : 'Hide'
 
-      this.setState({
-        value: !this.state.value,
+      this.setState((state) => ({
+        value: !state.value,
         buttonText: newButtonText
       })
+    )
+    
     }
 
     render() {

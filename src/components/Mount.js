@@ -18,6 +18,10 @@ class Time extends Component {
     );
   }
 
+  componentWillUnmount() {
+    clearInterval(this.state.time)
+  }
+
   render() {
     return <h1>{this.state.time}</h1>;
   }

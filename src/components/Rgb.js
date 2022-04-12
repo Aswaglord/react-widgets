@@ -13,13 +13,11 @@ export default class Rgb extends Component {
     }
   }
 
-  handleSlider(valueOne, valueTwo, valueThree) {
+  handleSlider(stateColor, newValue) {
     this.setState({
-      red: valueOne,
-      green: valueTwo,
-      blue: valueThree
+      [stateColor]: newValue
     })
-    console.log(this.state.red, this.state.green, this.state.blue)
+
   }
 
   render() {
@@ -27,9 +25,9 @@ export default class Rgb extends Component {
       <div>
         <div className="color-box" style={{backgroundColor: `rgb(${this.state.red},${this.state.green},${this.state.blue})`}}></div>
         <div>rgb({this.state.red}, {this.state.green}, {this.state.blue})</div>
-        <input onChange={(e => this.handleSlider(e.target.value,this.state.green,this.state.blue))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
-        <input onChange={(e => this.handleSlider(this.state.red,e.target.value,this.state.blue))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
-        <input onChange={(e => this.handleSlider(this.state.red,this.state.green,e.target.value))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
+        <input onChange={(e => this.handleSlider("red",e.target.value))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
+        <input onChange={(e => this.handleSlider("green",e.target.value))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
+        <input onChange={(e => this.handleSlider("blue",e.target.value))} defaultValue={0} type="range" id="points" name="points" min="0" max="255"/>
       </div>
       )
   }
